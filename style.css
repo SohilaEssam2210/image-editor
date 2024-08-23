@@ -55,6 +55,21 @@ h2 {
   margin: 15px 0;
 }
 
+/* Popup styling */
+.popup {
+  display: none;
+  position: fixed;
+  left: 35%;
+  bottom: 389px;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
 .left-img {
   display: flex;
   flex-direction: column;
@@ -63,7 +78,8 @@ h2 {
   gap: 50px;
 }
 
-.left-img img, canvas {
+.left-img img,
+canvas {
   max-width: 45vw;
   max-height: 60vh;
   border-radius: 10px;
@@ -90,6 +106,7 @@ h2 {
 .upload label:hover {
   background-color: #19194c;
   border-color: #19194c;
+  letter-spacing: 1.5px;
 }
 
 .filters ul {
@@ -98,6 +115,31 @@ h2 {
   justify-content: center;
   gap: 25px;
   direction: rtl;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns button {
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: #3333d8d2;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btns button:hover {
+  background-color: #1d1d69;
+  font-size: 24px;
+  box-shadow: 0 0 10px rgb(19, 16, 77);
 }
 
 .filters ul li {
@@ -160,7 +202,12 @@ h2 {
     margin-top: 25px;
   }
 
-  .left-img img , canvas {
+  .left-img img,
+  canvas {
     max-width: 73vw;
+  }
+
+  .btns {
+    margin-top: 15px;
   }
 }

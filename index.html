@@ -14,14 +14,15 @@
 <body>
   <h2>Image Editor</h2>
   <div class="container">
-
     <div class="left-img">
       <div class="img-box">
+        <!-- Popup Notification -->
+        <div id="popup" class="popup"></div>
         <img id="img">
         <canvas id="canvas"></canvas>
       </div>
       <div class="upload">
-        <label for="upload"> Upload 
+        <label for="upload"> Upload
           <i class="fa-solid fa-arrow-up-from-bracket"></i>
         </label>
         <input type="file" id="upload">
@@ -30,6 +31,19 @@
 
     <div class="filters">
       <ul>
+
+        <li class="btns">
+          <button id="bw-button">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+          </button>
+          <button id="pop-button">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <button id="auto-button">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </button>
+        </li>
+
         <li>
           <label for="saturate">Saturate</label>
           <input type="range" id="saturate" min="0" max="200" value="100">
@@ -67,6 +81,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
